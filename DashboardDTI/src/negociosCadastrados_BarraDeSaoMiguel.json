@@ -1,0 +1,298 @@
+[
+  {
+    "nome": "EcoTour Verde",
+    "categoria": "Ecoturismo",
+    "avaliacao": 4.7,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Agência de turismo"
+  },
+  {
+    "nome": "RaftMax Aventura",
+    "categoria": "Aventura",
+    "avaliacao": 4.5,
+    "acessivel": false,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Operadora de aventura"
+  },
+  {
+    "nome": "City Hotel Center",
+    "categoria": "Urbano",
+    "avaliacao": 4.3,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Hotel"
+  },
+  {
+    "nome": "Vinícola Vale do Sol",
+    "categoria": "Gastronomia",
+    "avaliacao": 4.9,
+    "acessivel": true,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Restaurante"
+  },
+  {
+    "nome": "Sítio Boa Vista",
+    "categoria": "Agroturismo",
+    "avaliacao": 4.4,
+    "acessivel": false,
+    "situacaoCadastral": "Em análise",
+    "tipo": "Fazenda turística"
+  },
+  {
+    "nome": "Centro de Convenções DTI",
+    "categoria": "Negócios",
+    "avaliacao": 4.2,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro de eventos"
+  },
+  {
+    "nome": "Teatro Municipal",
+    "categoria": "Cultural",
+    "avaliacao": 4.6,
+    "acessivel": true,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Teatro"
+  },
+  {
+    "nome": "Casa do Mar Restaurante",
+    "categoria": "Gastronomia",
+    "avaliacao": 4.8,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Restaurante"
+  },
+  {
+    "nome": "Pousada Vista da Barra",
+    "categoria": "Urbano",
+    "avaliacao": 4.4,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Pousada"
+  },
+  {
+    "nome": "Aventura Niquim Tours",
+    "categoria": "Aventura",
+    "avaliacao": 4.3,
+    "acessivel": false,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Agência de turismo"
+  },
+  {
+    "nome": "Barra Eco Stand Up",
+    "categoria": "Ecoturismo",
+    "avaliacao": 4.6,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Escola de esportes aquáticos"
+  },
+  {
+    "nome": "Fazenda Lagoa Serena",
+    "categoria": "Agroturismo",
+    "avaliacao": 4.5,
+    "acessivel": false,
+    "situacaoCadastral": "Em análise",
+    "tipo": "Fazenda turística"
+  },
+  {
+    "nome": "Centro Empresarial Costa Dourada",
+    "categoria": "Negócios",
+    "avaliacao": 4.1,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro empresarial"
+  },
+  {
+    "nome": "Ateliê Maré Criativa",
+    "categoria": "Cultural",
+    "avaliacao": 4.7,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Ateliê"
+  },
+  {
+    "nome": "Roteiro Buggy Experiência",
+    "categoria": "Aventura",
+    "avaliacao": 4.2,
+    "acessivel": false,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Operadora de aventura"
+  },
+  {
+    "nome": "PraiaSul Beach Club",
+    "categoria": "Urbano",
+    "avaliacao": 4.5,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Beach club"
+  },
+  {
+    "nome": "Sabores da Rota",
+    "categoria": "Gastronomia",
+    "avaliacao": 4.4,
+    "acessivel": true,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Restaurante"
+  },
+  {
+    "nome": "Agência Conecta Eventos",
+    "categoria": "Negócios",
+    "avaliacao": 4.3,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Agência de eventos"
+  },
+  {
+    "nome": "Casa de Cultura Lagoa",
+    "categoria": "Cultural",
+    "avaliacao": 4.2,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro cultural"
+  },
+  {
+    "nome": "Mangue Vivo Expedições",
+    "categoria": "Ecoturismo",
+    "avaliacao": 4.6,
+    "acessivel": false,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Operadora de ecoturismo"
+  },
+  {
+    "nome": "Corais Dive Center",
+    "categoria": "Aventura",
+    "avaliacao": 4.8,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro de mergulho"
+  },
+  {
+    "nome": "Barra Bike Experience",
+    "categoria": "Aventura",
+    "avaliacao": 4.1,
+    "acessivel": false,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Operadora de aventura"
+  },
+  {
+    "nome": "Orla Center Mall",
+    "categoria": "Negócios",
+    "avaliacao": 4.0,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Shopping"
+  },
+  {
+    "nome": "Estação Criativa Niquim",
+    "categoria": "Cultural",
+    "avaliacao": 4.5,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro cultural"
+  },
+  {
+    "nome": "Fábrica de Sabores Artesanais",
+    "categoria": "Gastronomia",
+    "avaliacao": 4.3,
+    "acessivel": true,
+    "situacaoCadastral": "Em análise",
+    "tipo": "Loja gastronômica"
+  },
+  {
+    "nome": "Hotel Boutique Miramar",
+    "categoria": "Urbano",
+    "avaliacao": 4.7,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Hotel"
+  },
+  {
+    "nome": "Lua Cheia Passeios Náuticos",
+    "categoria": "Aventura",
+    "avaliacao": 4.6,
+    "acessivel": false,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Operadora náutica"
+  },
+  {
+    "nome": "Veredas do Coco Experiências",
+    "categoria": "Agroturismo",
+    "avaliacao": 4.2,
+    "acessivel": false,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Fazenda turística"
+  },
+  {
+    "nome": "Barra Digital Hub",
+    "categoria": "Negócios",
+    "avaliacao": 4.4,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Coworking"
+  },
+  {
+    "nome": "Studio Arte & Mar",
+    "categoria": "Cultural",
+    "avaliacao": 4.1,
+    "acessivel": true,
+    "situacaoCadastral": "Em análise",
+    "tipo": "Ateliê"
+  },
+  {
+    "nome": "Rotas do Sabor Delivery",
+    "categoria": "Gastronomia",
+    "avaliacao": 4.0,
+    "acessivel": true,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Delivery"
+  },
+  {
+    "nome": "Expedição Raiz dos Mangues",
+    "categoria": "Ecoturismo",
+    "avaliacao": 4.5,
+    "acessivel": false,
+    "situacaoCadastral": "OK",
+    "tipo": "Operadora de ecoturismo"
+  },
+  {
+    "nome": "Circuito SUP Barra",
+    "categoria": "Aventura",
+    "avaliacao": 4.3,
+    "acessivel": true,
+    "situacaoCadastral": "Pendências CNPJ",
+    "tipo": "Escola de esportes aquáticos"
+  },
+  {
+    "nome": "Casa do Artesanato Mestre Chico",
+    "categoria": "Cultural",
+    "avaliacao": 4.6,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Loja de artesanato"
+  },
+  {
+    "nome": "Condomínio Corporativo Atlântico",
+    "categoria": "Negócios",
+    "avaliacao": 1.2,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Centro empresarial"
+  },
+  {
+    "nome": "GreenWay Trilhas Guiadas",
+    "categoria": "Ecoturismo",
+    "avaliacao": 3.4,
+    "acessivel": false,
+    "situacaoCadastral": "Pendente Cadastur",
+    "tipo": "Operadora de ecoturismo"
+  },
+  {
+    "nome": "Fazenda Escola Barra Viva",
+    "categoria": "Agroturismo",
+    "avaliacao": 2.3,
+    "acessivel": true,
+    "situacaoCadastral": "OK",
+    "tipo": "Fazenda turística"
+  }
+]

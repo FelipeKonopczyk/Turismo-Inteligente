@@ -1,0 +1,212 @@
+[
+  {
+    "nome": "Praia Barra de São Miguel",
+    "descricao_breve": "Praia principal, mar calmo e boa estrutura",
+    "latitude": -9.83492,
+    "longitude": -35.88558,
+    "categoria": "Urbano"
+  },
+  {
+    "nome": "Orla/centro de apoio (Barra de São Miguel)",
+    "descricao_breve": "Área mais urbanizada, boa base para passeios e serviços",
+    "latitude": -9.838205,
+    "longitude": -35.888614,
+    "categoria": "Negócios"
+  },
+  {
+    "nome": "Praia Bonita",
+    "descricao_breve": "Faixa tranquila próxima às áreas de veraneio",
+    "latitude": -9.81639,
+    "longitude": -35.88045,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Praia da Atalaia",
+    "descricao_breve": "Mar mais agitado, bom ponto para caminhar e surf em época certa",
+    "latitude": -9.846639,
+    "longitude": -35.904254,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Rio Niquim",
+    "descricao_breve": "Região de rio e mangue, comum para passeios de barco",
+    "latitude": -9.84394,
+    "longitude": -35.89885,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Lagoa do Roteiro",
+    "descricao_breve": "Lagoa com esportes náuticos e visual bonito",
+    "latitude": -9.836795,
+    "longitude": -35.928104,
+    "categoria": "Agroturismo"
+  },
+  {
+    "nome": "Praia do Gunga",
+    "descricao_breve": "Bate-volta clássico, coqueirais e mar bonito",
+    "latitude": -9.865578,
+    "longitude": -35.905794,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Falésias do Gunga",
+    "descricao_breve": "Trecho famoso pelas falésias coloridas",
+    "latitude": -9.904119,
+    "longitude": -35.939128,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Mirante do Gunga",
+    "descricao_breve": "Vista panorâmica da região do Gunga",
+    "latitude": -9.947001,
+    "longitude": -36.005127,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Praia do Francês (bate-volta)",
+    "descricao_breve": "Praia vizinha muito popular, fácil de encaixar no roteiro",
+    "latitude": -9.767641,
+    "longitude": -35.836872,
+    "categoria": "Cultural"
+  },
+  {
+    "nome": "Pontal do Barra",
+    "descricao_breve": "Nucleo tradicional as margens do rio Niquim.",
+    "latitude": -9.8421,
+    "longitude": -35.8833,
+    "categoria": "Cultural"
+  },
+  {
+    "nome": "Passeio das Piscinas Naturais",
+    "descricao_breve": "Saidas em jangada para piscinas rasas na mare baixa.",
+    "latitude": -9.8335,
+    "longitude": -35.8827,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Trilha das Falesias Secretas",
+    "descricao_breve": "Percurso guiado curto ate falesias isoladas.",
+    "latitude": -9.8882,
+    "longitude": -35.9205,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Mercado de Peixes do Niquim",
+    "descricao_breve": "Mercado tradicional com petiscos e pratos marinhos.",
+    "latitude": -9.8419,
+    "longitude": -35.8872,
+    "categoria": "Gastronomia"
+  },
+  {
+    "nome": "Mirante Caminho do Sol",
+    "descricao_breve": "Mirante com vista da lagoa e mar em 360 graus.",
+    "latitude": -9.8523,
+    "longitude": -35.8991,
+    "categoria": "Urbano"
+  },
+  {
+    "nome": "Parque Municipal Barra Viva",
+    "descricao_breve": "Area verde com passarelas suspensas e observacao de aves.",
+    "latitude": -9.8475,
+    "longitude": -35.8933,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Circuito Bike Costa dos Corais",
+    "descricao_breve": "Trajeto sinalizado para ciclismo de praia e estrada.",
+    "latitude": -9.8204,
+    "longitude": -35.8788,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Pier dos Pescadores",
+    "descricao_breve": "Embarque para passeios de barco e jangadas.",
+    "latitude": -9.8397,
+    "longitude": -35.8891,
+    "categoria": "Urbano"
+  },
+  {
+    "nome": "Vila Gastronomica do Gunga",
+    "descricao_breve": "Conjunto de restaurantes e quiosques tematicos.",
+    "latitude": -9.8665,
+    "longitude": -35.9024,
+    "categoria": "Gastronomia"
+  },
+  {
+    "nome": "Haras Lagoa Azul",
+    "descricao_breve": "Vivencias equestres e aulas de equitacao.",
+    "latitude": -9.8589,
+    "longitude": -35.9311,
+    "categoria": "Agroturismo"
+  },
+  {
+    "nome": "Fazenda de Coco Vista Verde",
+    "descricao_breve": "Tour rural focado no cultivo de coco e degustacoes.",
+    "latitude": -9.8727,
+    "longitude": -35.9265,
+    "categoria": "Agroturismo"
+  },
+  {
+    "nome": "Roteiro de Arte Popular",
+    "descricao_breve": "Atelies e murais coloridos assinados por artistas locais.",
+    "latitude": -9.845,
+    "longitude": -35.886,
+    "categoria": "Cultural"
+  },
+  {
+    "nome": "Centro de Informacoes Turisticas",
+    "descricao_breve": "Ponto de apoio com mapas atualizados e atendimento bilingue.",
+    "latitude": -9.8368,
+    "longitude": -35.8876,
+    "categoria": "Urbano"
+  },
+  {
+    "nome": "Marina Barra Mar",
+    "descricao_breve": "Estrutura de apoio para lanchas e esportes nauticos.",
+    "latitude": -9.8438,
+    "longitude": -35.8921,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Espaco Cultural Mestre Ze",
+    "descricao_breve": "Palco aberto para rodas de coco e oficinas comunitarias.",
+    "latitude": -9.8412,
+    "longitude": -35.8845,
+    "categoria": "Cultural"
+  },
+  {
+    "nome": "Ribeirinha do Niquim",
+    "descricao_breve": "Experiencia comunitaria em vilas ribeirinhas do rio.",
+    "latitude": -9.8485,
+    "longitude": -35.8962,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Mirante das Bromelias",
+    "descricao_breve": "Deck elevado dentro de reserva com vegetacao nativa.",
+    "latitude": -9.8283,
+    "longitude": -35.8739,
+    "categoria": "Ecoturismo"
+  },
+  {
+    "nome": "Praia das Conchas",
+    "descricao_breve": "Trecho isolado indicado para trilhas curtas e snorkel.",
+    "latitude": -9.8572,
+    "longitude": -35.9127,
+    "categoria": "Aventura"
+  },
+  {
+    "nome": "Boulevard Artes e Sabores",
+    "descricao_breve": "Calcadao com cafes autorais, galerias e musica ao vivo.",
+    "latitude": -9.8375,
+    "longitude": -35.8851,
+    "categoria": "Gastronomia"
+  },
+  {
+    "nome": "Centro de Eventos Barra Experience",
+    "descricao_breve": "Estrutura modular para encontros corporativos e feiras.",
+    "latitude": -9.8326,
+    "longitude": -35.8832,
+    "categoria": "Neg\u00C7\u00FCcios"
+  }
+]
