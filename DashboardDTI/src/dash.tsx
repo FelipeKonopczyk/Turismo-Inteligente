@@ -734,7 +734,7 @@ const MAP_MARKERS: MapMarker[] = (attractionsData as AttractionRecord[]).map((at
 // --------------------
 // Funções de agregação
 // --------------------
-function aggregateMetrics(categories: BaseTourismCategory[]): CategoryMetrics {
+function aggregateMetrics(categories: readonly BaseTourismCategory[]): CategoryMetrics {
   if (categories.length === 0) {
     // fallback seguro
     return {
@@ -840,7 +840,7 @@ function aggregateMetrics(categories: BaseTourismCategory[]): CategoryMetrics {
   };
 }
 
-function aggregateRadar(categories: BaseTourismCategory[]): RadarPoint[] {
+function aggregateRadar(categories: readonly BaseTourismCategory[]): RadarPoint[] {
   if (categories.length === 0) return [];
   const eixos = maturityByCategory[categories[0]].map((p) => p.eixo);
 
