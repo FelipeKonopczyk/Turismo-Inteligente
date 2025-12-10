@@ -23,16 +23,17 @@ import KpiCard from "./components/KpiCard";
 import {
   FaLeaf,
   FaMountain,
-  FaCity,
-  FaUtensils,
-  FaTractor,
+  FaUniversity,
+  FaWater,
+  FaFootballBall,
+  FaFish,
   FaBriefcase,
+  FaHeartbeat,
+  FaTractor,
   FaTheaterMasks,
   FaWifi,
   FaUniversalAccess,
-  FaHeartbeat,
   FaShieldAlt,
-  FaWater,
   FaBolt,
   FaRoute,
   FaLightbulb,
@@ -53,18 +54,24 @@ ChartJS.register(
 
 const CATEGORIES = [
   { id: "Todos", label: "Todos", icon: undefined },
+  { id: "Turismo Cultural", label: "Turismo Cultural", icon: <FaTheaterMasks /> },
   { id: "Ecoturismo", label: "Ecoturismo", icon: <FaLeaf /> },
-  { id: "Aventura", label: "Turismo de aventura", icon: <FaMountain /> },
-  { id: "Urbano", label: "Turismo urbano", icon: <FaCity /> },
-  { id: "Gastronomia", label: "Gastronomia", icon: <FaUtensils /> },
-  { id: "Agroturismo", label: "Agroturismo", icon: <FaTractor /> },
-  { id: "Negócios", label: "Negócios", icon: <FaBriefcase /> },
-  { id: "Cultural", label: "Cultural", icon: <FaTheaterMasks /> }
+  { id: "Turismo Rural", label: "Turismo Rural", icon: <FaTractor /> },
+  { id: "Turismo de Estudos e Intercâmbio", label: "Turismo de Estudos e Intercâmbio", icon: <FaUniversity /> },
+  { id: "Turismo Náutico", label: "Turismo Náutico", icon: <FaWater /> },
+  { id: "Turismo de Esportes", label: "Turismo de Esportes", icon: <FaFootballBall /> },
+  { id: "Turismo de Aventura", label: "Turismo de Aventura", icon: <FaMountain /> },
+  { id: "Turismo de Negócios e Eventos", label: "Turismo de Negócios e Eventos", icon: <FaBriefcase /> },
+  { id: "Turismo de Pesca", label: "Turismo de Pesca", icon: <FaFish /> },
+  { id: "Turismo de Saúde", label: "Turismo de Saúde", icon: <FaHeartbeat /> }
 ] as const satisfies ReadonlyArray<{
   id: string;
   label: string;
   icon?: ReactNode;
 }>;
+
+const BASE_CATEGORIES = ["Cultural", "Ecoturismo", "Agroturismo", "Urbano", "Gastronomia", "Aventura", "Negócios"] as const;
+type BaseTourismCategory = typeof BASE_CATEGORIES[number];
 
 type CategoryDefinition = typeof CATEGORIES[number];
 type CategoryId = CategoryDefinition["id"];
@@ -74,38 +81,82 @@ const TOURISM_CATEGORIES = CATEGORIES.map((category) => category.id).filter(
   (id): id is TourismCategory => id !== "Todos"
 );
 
+const CATEGORY_BASE_MAP: Record<TourismCategory, BaseTourismCategory> = {
+  "Turismo Cultural": "Cultural",
+  Ecoturismo: "Ecoturismo",
+  "Turismo Rural": "Agroturismo",
+  "Turismo de Estudos e Intercâmbio": "Urbano",
+  "Turismo Náutico": "Ecoturismo",
+  "Turismo de Esportes": "Aventura",
+  "Turismo de Aventura": "Aventura",
+  "Turismo de Negócios e Eventos": "Negócios",
+  "Turismo de Pesca": "Ecoturismo",
+  "Turismo de Saúde": "Gastronomia"
+};
+
 const CATEGORY_ICON_MAP: Record<TourismCategory, ReactNode> = {
+  "Turismo Cultural": <FaTheaterMasks />,
   Ecoturismo: <FaLeaf />,
-  Aventura: <FaMountain />,
-  Urbano: <FaCity />,
-  Gastronomia: <FaUtensils />,
-  Agroturismo: <FaTractor />,
-  "Negócios": <FaBriefcase />,
-  Cultural: <FaTheaterMasks />
+  "Turismo Rural": <FaTractor />,
+  "Turismo de Estudos e Intercâmbio": <FaUniversity />,
+  "Turismo Náutico": <FaWater />,
+  "Turismo de Esportes": <FaFootballBall />,
+  "Turismo de Aventura": <FaMountain />,
+  "Turismo de Negócios e Eventos": <FaBriefcase />,
+  "Turismo de Pesca": <FaFish />,
+  "Turismo de Saúde": <FaHeartbeat />
 };
 
 const CATEGORY_COLOR_MAP: Record<TourismCategory, string> = {
+  "Turismo Cultural": "#c084fc",
   Ecoturismo: "#22c55e",
-  Aventura: "#f97316",
-  Urbano: "#0ea5e9",
-  Gastronomia: "#f472b6",
-  Agroturismo: "#84cc16",
-  "Negócios": "#facc15",
-  Cultural: "#c084fc"
+  "Turismo Rural": "#84cc16",
+  "Turismo de Estudos e Intercâmbio": "#0ea5e9",
+  "Turismo Náutico": "#38bdf8",
+  "Turismo de Esportes": "#f97316",
+  "Turismo de Aventura": "#ea580c",
+  "Turismo de Negócios e Eventos": "#facc15",
+  "Turismo de Pesca": "#0f766e",
+  "Turismo de Saúde": "#f472b6"
+};
+
+const LEGACY_TO_NEW_CATEGORY: Record<string, TourismCategory> = {
+  Cultural: "Turismo Cultural",
+  "Turismo Cultural": "Turismo Cultural",
+  Ecoturismo: "Ecoturismo",
+  "Turismo Rural": "Turismo Rural",
+  Agroturismo: "Turismo Rural",
+  Urbano: "Turismo de Estudos e Intercâmbio",
+  "Turismo de Estudos e Intercâmbio": "Turismo de Estudos e Intercâmbio",
+  Gastronomia: "Turismo de Saúde",
+  "Turismo de Saúde": "Turismo de Saúde",
+  Aventura: "Turismo de Aventura",
+  "Turismo de Aventura": "Turismo de Aventura",
+  "Turismo de Esportes": "Turismo de Esportes",
+  "Turismo Náutico": "Turismo Náutico",
+  "Turismo de Negócios e Eventos": "Turismo de Negócios e Eventos",
+  "Negócios": "Turismo de Negócios e Eventos",
+  Negocios: "Turismo de Negócios e Eventos",
+  "Turismo de Pesca": "Turismo de Pesca"
 };
 
 const ATTRACTION_CATEGORY_MAP: Record<string, TourismCategory> = {
-  "Praia Barra de São Miguel": "Urbano",
-  "Orla/centro de apoio (Barra de São Miguel)": "Negócios",
-  "Praia Bonita": "Ecoturismo",
-  "Praia da Atalaia": "Aventura",
-  "Rio Niquim": "Ecoturismo",
-  "Lagoa do Roteiro": "Agroturismo",
-  "Praia do Gunga": "Aventura",
-  "Falésias do Gunga": "Aventura",
-  "Mirante do Gunga": "Ecoturismo",
-  "Praia do Francês (bate-volta)": "Cultural"
+  "Praia Barra de São Miguel": "Turismo Náutico",
+  "Orla/centro de apoio (Barra de São Miguel)": "Turismo de Negócios e Eventos",
+  "Praia Bonita": "Turismo Náutico",
+  "Praia da Atalaia": "Turismo de Esportes",
+  "Rio Niquim": "Turismo de Pesca",
+  "Lagoa do Roteiro": "Turismo Náutico",
+  "Praia do Gunga": "Turismo Náutico",
+  "Falésias do Gunga": "Turismo de Aventura",
+  "Mirante do Gunga": "Turismo Cultural",
+  "Praia do Francês (bate-volta)": "Turismo Cultural"
 };
+
+function normalizeCategoryName(category?: string): TourismCategory {
+  if (!category) return "Ecoturismo";
+  return LEGACY_TO_NEW_CATEGORY[category] ?? "Ecoturismo";
+}
 
 const categoryIconCache = new Map<TourismCategory, L.DivIcon>();
 
@@ -213,7 +264,7 @@ const MODAL_LABELS: Record<keyof ModalShare, string> = {
 type TouristMonthData = {
   mes: string;
   ano: number;
-} & Record<TourismCategory, number>;
+} & Record<BaseTourismCategory, number>;
 
 type RadarPoint = {
   eixo: string;
@@ -274,7 +325,7 @@ const radarChartOptions: ChartOptions<"radar"> = {
 // Dados fictícios
 // --------------------
 
-const metricsByCategory: Record<TourismCategory, CategoryMetrics> = {
+const metricsByCategory: Record<BaseTourismCategory, CategoryMetrics> = {
   Ecoturismo: {
     turistas: 12450,
     avaliacaoMedia: 4.7,
@@ -563,7 +614,7 @@ const touristsByMonth: TouristMonthData[] = [
 /**
  * Radar agora representa maturidade por eixo DTI (0-5).
  */
-const maturityByCategory: Record<TourismCategory, RadarPoint[]> = {
+const maturityByCategory: Record<BaseTourismCategory, RadarPoint[]> = {
   Ecoturismo: [
     { eixo: "Governança", valor: 4.0 },
     { eixo: "Inovação", valor: 3.8 },
@@ -643,7 +694,12 @@ const maturityByCategory: Record<TourismCategory, RadarPoint[]> = {
   ]
 };
 
-const negocios: Business[] = negociosData as Business[];
+type RawBusiness = Omit<Business, "categoria"> & { categoria: string };
+
+const negocios: Business[] = (negociosData as RawBusiness[]).map((negocio) => ({
+  ...negocio,
+  categoria: normalizeCategoryName(negocio.categoria)
+}));
 
 type MapMarker = {
   label: string;
@@ -659,11 +715,12 @@ type AttractionRecord = {
   descricao_breve: string;
   latitude: number;
   longitude: number;
-  categoria?: TourismCategory;
+  categoria?: string;
 };
 
 const MAP_MARKERS: MapMarker[] = (attractionsData as AttractionRecord[]).map((attraction) => {
-  const category = attraction.categoria ?? ATTRACTION_CATEGORY_MAP[attraction.nome] ?? "Ecoturismo";
+  const rawCategory = attraction.categoria ?? ATTRACTION_CATEGORY_MAP[attraction.nome] ?? "Ecoturismo";
+  const category = normalizeCategoryName(rawCategory);
   return {
     label: attraction.nome,
     descricao: attraction.descricao_breve,
@@ -677,7 +734,7 @@ const MAP_MARKERS: MapMarker[] = (attractionsData as AttractionRecord[]).map((at
 // --------------------
 // Funções de agregação
 // --------------------
-function aggregateMetrics(categories: TourismCategory[]): CategoryMetrics {
+function aggregateMetrics(categories: BaseTourismCategory[]): CategoryMetrics {
   if (categories.length === 0) {
     // fallback seguro
     return {
@@ -783,7 +840,7 @@ function aggregateMetrics(categories: TourismCategory[]): CategoryMetrics {
   };
 }
 
-function aggregateRadar(categories: TourismCategory[]): RadarPoint[] {
+function aggregateRadar(categories: BaseTourismCategory[]): RadarPoint[] {
   if (categories.length === 0) return [];
   const eixos = maturityByCategory[categories[0]].map((p) => p.eixo);
 
@@ -796,6 +853,7 @@ function aggregateRadar(categories: TourismCategory[]): RadarPoint[] {
     return { eixo, valor: media };
   });
 }
+
 
 // --------------------
 // Dashboard
@@ -846,9 +904,10 @@ function DtiDashboard() {
 
   const metrics = useMemo<CategoryMetrics>(() => {
     if (categoriaSelecionada === "Todos") {
-      return aggregateMetrics(TOURISM_CATEGORIES);
+      return aggregateMetrics(BASE_CATEGORIES);
     }
-    return metricsByCategory[categoriaSelecionada];
+    const baseCategory = CATEGORY_BASE_MAP[categoriaSelecionada];
+    return metricsByCategory[baseCategory];
   }, [categoriaSelecionada]);
 
   const filteredTouristSeries = useMemo(() => {
@@ -864,14 +923,15 @@ function DtiDashboard() {
     const dataset = filteredTouristSeries;
     if (categoriaSelecionada === "Todos") {
       return dataset.map((item) => {
-        const soma = TOURISM_CATEGORIES.reduce((sum, category) => sum + item[category], 0);
+        const soma = BASE_CATEGORIES.reduce((sum, category) => sum + item[category], 0);
         return { mes: `${item.mes}/${item.ano}`, Turistas: soma };
       });
     }
 
+    const baseCategory = CATEGORY_BASE_MAP[categoriaSelecionada];
     return dataset.map((item) => ({
       mes: `${item.mes}/${item.ano}`,
-      Turistas: item[categoriaSelecionada]
+      Turistas: item[baseCategory]
     }));
   }, [filteredTouristSeries, categoriaSelecionada]);
 
@@ -893,11 +953,11 @@ function DtiDashboard() {
   }, [lineData]);
 
   const radarBaseData = useMemo<RadarPoint[]>(() => {
-    const baseData =
-      categoriaSelecionada === "Todos"
-        ? aggregateRadar(TOURISM_CATEGORIES)
-        : maturityByCategory[categoriaSelecionada];
-    return baseData;
+    if (categoriaSelecionada === "Todos") {
+      return aggregateRadar(BASE_CATEGORIES);
+    }
+    const baseCategory = CATEGORY_BASE_MAP[categoriaSelecionada];
+    return maturityByCategory[baseCategory];
   }, [categoriaSelecionada]);
 
   const radarPercentData = useMemo(() => {
